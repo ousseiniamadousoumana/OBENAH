@@ -1,0 +1,21 @@
+SSEINY'S V4 — PACKAGE DU SITE
+
+Contenu :
+- index.html : page d'accueil principale
+- images/sseinys-logo.png : logo SSEINY'S extrait du visuel fourni
+- images/cameleon-sseiny.png : caméléon détouré utilisé dans le hero et l'animation du pied de page
+
+Installation : téléverser index.html à la racine du dépôt GitHub et téléverser le dossier images à la même racine. Conserver les chemins relatifs.
+
+Les boutons sociaux utilisent les liens déjà présents dans le projet. Les badges sont des emblèmes décoratifs de marque et ne constituent pas une certification officielle de Facebook ou d'une autre plateforme.
+
+MODIFICATIONS V5 (d'après les notes du document SSEINY.docx) :
+- Couleur secondaire changée en #00DA00.
+- Icônes des réseaux sociaux réduites et animées (flottement, effet au survol).
+- Caméléon animé dans le cadre du portrait professionnel.
+- Badge bleu de marque ajouté à côté de SSEINY'S dans le menu latéral.
+- Bouton de notification ajouté (demande l'autorisation d'afficher des notifications dans le navigateur ; l'envoi de notifications aux visiteurs nécessite un service côté serveur).
+- Caméléon utilisé comme icône du site (favicon).
+- Photo du portrait professionnel remplacée par images/portrait-professionnel.png (ajoutée à la racine du dossier images).
+
+VERSION À PLAT (racine du dépôt) : tous les fichiers (index.html et les .png) doivent être à la racine du dépôt, sans dossier images/.
