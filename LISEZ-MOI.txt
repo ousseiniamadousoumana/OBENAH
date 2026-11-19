@@ -1,0 +1,24 @@
+SSEINY'S — VERSION PREMIUM MULTIPAGES
+
+Pages : index.html, apropos.html, services.html, produits.html, projets.html, vision.html, partenariats.html, actualites.html, galerie.html, contact.html.
+Fiches projets : projet-01.html à projet-10.html.
+
+INSTALLATION :
+1. Décompresser le ZIP.
+2. Envoyer tous les fichiers et dossiers à la racine du dépôt GitHub.
+3. Sur Vercel, choisir le dépôt et laisser le framework en Other / configuration statique. Aucun build command requis ; output directory = . (racine).
+
+FONCTIONS ACTIVES :
+- Navigation multipages réelle.
+- Mise en page responsive.
+- Formulaires adaptés avec génération d’un message WhatsApp vers le numéro communiqué.
+- Liens de contact et partenaires.
+
+À CONNECTER POUR UNE MISE EN PRODUCTION COMPLÈTE :
+- Base de données et authentification pour commandes, membres, analytics et administration.
+- Passerelles de paiement officielles pour encaissement automatisé. Cette version ne collecte aucun paiement.
+- Service push/email/SMS pour notifications collectives.
+- Génération et validation serveur des QR codes d’invitation.
+- Visuels officiels des opérateurs de paiement, à valider avant intégration.
+
+Les statuts et chiffres non confirmés ne sont pas inventés. Les fiches projets sont indiquées comme concepts à étudier lorsque leur avancement n’a pas été communiqué.
