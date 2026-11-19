@@ -1,0 +1,25 @@
+SSEINY'S — VERSION 8 (dossier à plat : tout à la racine du dépôt)
+
+FICHIERS À TÉLÉVERSER À LA RACINE :
+index.html, cameleon-sseiny.png, cameleon-hero.png, portrait-professionnel.png, sseinys-logo.png
+
+NOUVEAUTÉS :
+- Services : formulaire de commande ou de devis qui ouvre WhatsApp (+229 01 50 22 80 50) avec les informations.
+  Services « commande » (crypto, formations, produits, ebooks) : choix du moyen de paiement
+  (Mynita, Amanata, Airtel Money, Moov Money, Wave, MTN Mobile Money).
+  Services « devis » (B2B, mariage, invitations) : pas de paiement demandé, devis confirmé ensuite.
+- Mes produits : tourteau de coton (unité, tonne, camion) et ebooks / produits digitaux.
+- Invitations en ligne : liste d'invités, carte avec QR code par invité, impression.
+  Les listes restent sur l'appareil ; un suivi des présences en temps réel demande un serveur.
+- Projets : bouton « Proposer une idée de projet ».
+- Partenariats : liens vers les deux entreprises et bouton « Devenir partenaire ».
+- Actualités : bandeau défilant, cartes d'annonces, bouton de notifications.
+- Galerie : emplacements prêts pour vos photos.
+- Compteur de visites : renseigner VISIT_COUNTER_URL dans index.html (voir ci-dessous).
+
+COMPTEUR DE VISITES :
+Sans URL, le compteur ne compte que les visites sur cet appareil. Pour un compteur global,
+créez un compteur gratuit (ex. countapi.xyz) et collez son adresse dans VISIT_COUNTER_URL.
+
+NUMÉRO WHATSAPP :
+Modifiez la constante WA dans index.html si le numéro change.
