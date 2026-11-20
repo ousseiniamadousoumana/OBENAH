@@ -1,7 +1,0 @@
-SSEINY'S V8 — VERSION RESTRUCTURÉE
-
-Cette archive contient le site multi-pages, les feuilles CSS et scripts séparés, le portail administrateur et le schéma Supabase.
-
-Consulter README-SSEINYS-V8.md pour l'installation, la configuration Supabase, la création du compte administrateur et le déploiement Vercel.
-
-Ne pas déployer uniquement index.html : téléverser l'ensemble des dossiers et fichiers à la racine du dépôt.
