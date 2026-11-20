@@ -1,0 +1,19 @@
+SSEINY'S — MISE À JOUR DU SITE EXISTANT
+
+Base utilisée : SSEINYS-V7-RACINE.zip (index.html + logo + portrait + cameleon).
+Les visuels et l'identité existants sont conservés. La structure est réorganisée en pages HTML indépendantes.
+
+FICHIERS :
+- index.html : accueil
+- apropos.html, services.html, produits.html, projets.html, vision.html, partenariats.html, actualites.html, galerie.html, contact.html
+- projet-01.html à projet-10.html : fiches projets
+- assets.css / assets.js : styles et scripts partagés
+- mentions-legales.html : page à compléter juridiquement
+- admin/index.html : emplacement préparatoire uniquement
+- PNG : logo, portrait et caméléon d'origine
+
+INSTALLATION VERCEL (site statique) : importer tout le contenu à la racine du dépôt GitHub. Aucun framework ni commande de build requis.
+
+IMPORTANT : les formulaires ouvrent WhatsApp avec un message prérempli. Les commandes, statistiques, notifications collectives, invitations QR code et authentification administrateur nécessitent un backend sécurisé. Ils ne sont pas simulés comme actifs. Les paiements ne sont pas encaissés depuis ce site.
+
+Les prix, stocks, états d'avancement, biographies détaillées et photos d'événements non communiqués restent à compléter.
