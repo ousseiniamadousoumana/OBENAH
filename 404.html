@@ -1,0 +1,642 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#061A13">
+
+<title>404 | SSEINY'S — Page introuvable</title>
+<meta name="description" content="La destination demandée est inaccessible. Explorez les différentes rubriques de SSEINY'S pour poursuivre votre visite.">
+<meta name="robots" content="noindex, follow">
+
+<link rel="icon" href="assets/favicon.png" type="image/png">
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+:root {
+  --bg: #061A13;
+  --bg2: #09251B;
+  --green: #16E69A;
+  --green2: #00A86B;
+  --white: #FFFFFF;
+  --muted: #A8C5B8;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--bg);
+  color: var(--white);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+a { text-decoration: none; color: inherit; }
+
+header {
+  min-height: 85px;
+  padding: 15px 6%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(22,230,154,.15);
+  background: rgba(6,26,19,.94);
+  position: relative;
+  z-index: 10;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 27px;
+  font-weight: 900;
+  font-style: italic;
+  letter-spacing: -1px;
+}
+
+.brand img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+}
+
+.brand span { color: var(--green); }
+
+.menu-btn {
+  display: none;
+  border: 1px solid rgba(22,230,154,.4);
+  background: transparent;
+  color: var(--green);
+  font-size: 25px;
+  padding: 8px 13px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+nav a {
+  font-size: 11px;
+  font-weight: 700;
+  color: #D0E5DA;
+  transition: .3s;
+}
+
+nav a:hover { color: var(--green); }
+
+main {
+  min-height: 720px;
+  padding: 75px 20px 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+main::before {
+  content: "";
+  position: absolute;
+  width: 650px;
+  height: 650px;
+  background: radial-gradient(circle,rgba(0,230,140,.13),transparent 68%);
+  z-index: -1;
+}
+
+.portal {
+  position: absolute;
+  width: 360px;
+  height: 360px;
+  border: 2px solid rgba(22,230,154,.75);
+  border-radius: 50%;
+  box-shadow:
+    0 0 20px #00D98B,
+    0 0 60px rgba(0,217,139,.45),
+    inset 0 0 35px rgba(0,217,139,.25);
+  animation: portal 8s linear infinite;
+  z-index: -1;
+}
+
+.portal::before,
+.portal::after {
+  content: "";
+  position: absolute;
+  inset: 18px;
+  border: 2px solid rgba(22,230,154,.45);
+  border-radius: 50%;
+  box-shadow: 0 0 25px rgba(22,230,154,.4);
+}
+
+.portal::after {
+  inset: 45px;
+  border-style: dashed;
+  animation: portal 12s linear infinite reverse;
+}
+
+@keyframes portal {
+  to { transform: rotate(360deg); }
+}
+
+.particles {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.particles i {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: var(--green);
+  border-radius: 50%;
+  box-shadow: 0 0 12px var(--green);
+  animation: float 7s ease-in-out infinite alternate;
+}
+
+.particles i:nth-child(1) { left: 12%; top: 25%; }
+.particles i:nth-child(2) { left: 85%; top: 20%; animation-delay: 1s; }
+.particles i:nth-child(3) { left: 20%; top: 75%; animation-delay: 2s; }
+.particles i:nth-child(4) { left: 80%; top: 70%; animation-delay: 3s; }
+.particles i:nth-child(5) { left: 50%; top: 15%; animation-delay: 1.5s; }
+.particles i:nth-child(6) { left: 65%; top: 85%; animation-delay: 2.5s; }
+
+@keyframes float {
+  from { transform: translateY(0) scale(.7); opacity: .3; }
+  to { transform: translateY(-45px) scale(1.5); opacity: 1; }
+}
+
+.content {
+  width: 100%;
+  max-width: 720px;
+  text-align: center;
+  z-index: 2;
+  animation: appear 1s ease both;
+}
+
+@keyframes appear {
+  from { opacity: 0; transform: translateY(25px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.eyebrow {
+  color: var(--green);
+  letter-spacing: 5px;
+  font-size: 11px;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.code {
+  font-size: clamp(110px,22vw,210px);
+  font-weight: 900;
+  line-height: .95;
+  letter-spacing: -12px;
+  color: #DFFFF1;
+  text-shadow:
+    0 0 8px #16E69A,
+    0 0 25px #00D98B,
+    0 0 55px rgba(0,217,139,.8);
+  animation: neon 3s ease-in-out infinite alternate;
+}
+
+@keyframes neon {
+  from { text-shadow: 0 0 10px #16E69A,0 0 25px #00D98B; }
+  to { text-shadow: 0 0 20px #16E69A,0 0 65px #00D98B; }
+}
+
+h1 {
+  margin-top: 28px;
+  font-size: clamp(23px,4vw,36px);
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.description {
+  color: var(--muted);
+  line-height: 1.8;
+  max-width: 520px;
+  margin: 18px auto 30px;
+  font-size: 14px;
+}
+
+.search {
+  display: flex;
+  max-width: 480px;
+  margin: 0 auto 25px;
+  border: 1px solid rgba(22,230,154,.4);
+  background: #0B2B20;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.search input {
+  flex: 1;
+  min-width: 0;
+  padding: 16px;
+  color: white;
+  background: transparent;
+  border: 0;
+  outline: none;
+  font-size: 13px;
+}
+
+.search button {
+  background: var(--green);
+  color: #052116;
+  border: 0;
+  padding: 0 20px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+#results {
+  max-width: 480px;
+  margin: -15px auto 20px;
+  text-align: left;
+}
+
+#results a {
+  display: block;
+  padding: 12px;
+  background: #0B3022;
+  border-bottom: 1px solid rgba(22,230,154,.15);
+  color: var(--green);
+  font-size: 13px;
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 21px;
+  border-radius: 9px;
+  border: 1px solid var(--green);
+  font-size: 12px;
+  font-weight: 800;
+  transition: .3s;
+}
+
+.btn.primary {
+  background: var(--green);
+  color: #052116;
+}
+
+.btn.secondary {
+  color: var(--green);
+  background: rgba(22,230,154,.06);
+}
+
+.btn:hover {
+  box-shadow: 0 0 25px rgba(22,230,154,.35);
+  transform: translateY(-3px);
+}
+
+footer {
+  border-top: 1px solid rgba(22,230,154,.2);
+  background: #04130E;
+  padding: 55px 6% 25px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  gap: 45px;
+  max-width: 1250px;
+  margin: auto;
+}
+
+footer h3 {
+  color: var(--green);
+  font-size: 13px;
+  margin-bottom: 18px;
+}
+
+footer p, footer a {
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 2;
+}
+
+footer a:hover { color: var(--green); }
+
+.footer-links {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4px 15px;
+}
+
+.socials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin-top: 12px;
+}
+
+.socials a {
+  border: 1px solid rgba(22,230,154,.3);
+  border-radius: 7px;
+  padding: 7px 10px;
+  transition: .3s;
+}
+
+.socials a:hover {
+  color: var(--green);
+  border-color: var(--green);
+}
+
+.copyright {
+  border-top: 1px solid rgba(22,230,154,.15);
+  margin-top: 35px;
+  padding-top: 22px;
+  text-align: center;
+  color: #789487;
+  font-size: 11px;
+}
+
+.motion-control {
+  position: fixed;
+  right: 15px;
+  bottom: 15px;
+  z-index: 20;
+  background: #0B3022;
+  color: var(--green);
+  border: 1px solid rgba(22,230,154,.4);
+  border-radius: 30px;
+  padding: 10px 14px;
+  cursor: pointer;
+  font-size: 11px;
+}
+
+@media(max-width:900px) {
+  .menu-btn { display: block; }
+  nav {
+    display: none;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    background: #071D15;
+    padding: 20px 6%;
+    flex-direction: column;
+    align-items: flex-start;
+    max-height: 75vh;
+    overflow-y: auto;
+    border-bottom: 1px solid var(--green);
+  }
+  nav.open { display: flex; }
+  nav a { font-size: 13px; padding: 7px 0; }
+}
+
+@media(max-width:650px) {
+  main { min-height: 690px; padding: 60px 18px; }
+  .portal { width: 270px; height: 270px; }
+  .code { letter-spacing: -6px; }
+  .actions { flex-direction: column; }
+  .btn { width: 100%; }
+  .footer-grid { grid-template-columns: 1fr; gap: 30px; }
+}
+
+@media(prefers-reduced-motion:reduce) {
+  *,*::before,*::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: .01ms !important;
+  }
+}
+
+body.reduce-motion *,body.reduce-motion *::before,body.reduce-motion *::after {
+  animation: none !important;
+  transition: none !important;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+  <a class="brand" href="index.html">
+    <img src="assets/logo-sseinys.png" alt="Logo SSEINY'S">
+    SSEINY<span>'S</span>
+  </a>
+
+  <button class="menu-btn" id="menuBtn" aria-label="Ouvrir le menu">☰</button>
+
+  <nav id="navigation">
+    <a href="index.html">01 — IDENTITÉ VISUELLE</a>
+    <a href="index.html">02 — PAGE ACCUEIL</a>
+    <a href="index.html">03 — PAGE À PROPOS</a>
+    <a href="index.html">04 — PAGE SERVICES</a>
+    <a href="index.html">05 — PAGE PORTFOLIO</a>
+    <a href="index.html">06 — CONTACT</a>
+    <a href="index.html">07 — MES PROJETS</a>
+    <a href="index.html">08 — MA VISION</a>
+    <a href="index.html">09 — PARTENARIAT</a>
+    <a href="index.html">10 — ACTUALITÉS</a>
+    <a href="index.html">11 — MENTIONS LÉGALES</a>
+    <a href="index.html">12 — GALERIE</a>
+  </nav>
+</header>
+
+<main>
+  <div class="particles">
+    <i></i><i></i><i></i><i></i><i></i><i></i>
+  </div>
+
+  <div class="portal"></div>
+
+  <section class="content">
+    <div class="eyebrow">SSEINY'S DIGITAL EXPERIENCE</div>
+
+    <div class="code">404</div>
+
+    <h1>PAGE INTROUVABLE</h1>
+
+    <p class="description">
+      La destination demandée est inaccessible.
+      Explorez les différentes rubriques de SSEINY'S
+      pour poursuivre votre visite.
+    </p>
+
+    <form class="search" id="searchForm">
+      <input id="searchInput" type="search"
+        placeholder="Rechercher une rubrique..."
+        aria-label="Rechercher une rubrique">
+      <button type="submit">RECHERCHER</button>
+    </form>
+
+    <div id="results" aria-live="polite"></div>
+
+    <div class="actions">
+      <a class="btn primary" href="index.html">⌂ RETOUR À L'ACCUEIL</a>
+      <a class="btn secondary" href="index.html">DÉCOUVRIR NOS SERVICES</a>
+      <a class="btn secondary" href="index.html">NOUS CONTACTER</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-grid">
+
+    <div>
+      <h3>SSEINY'S</h3>
+      <p>
+        Un univers dédié à l'identité, à la vision,
+        aux projets et aux ambitions.
+        Explorez notre univers et découvrez nos activités.
+      </p>
+    </div>
+
+    <div>
+      <h3>NAVIGATION</h3>
+      <div class="footer-links">
+        <a href="index.html">Identité visuelle</a>
+        <a href="index.html">Accueil</a>
+        <a href="index.html">À propos</a>
+        <a href="index.html">Services</a>
+        <a href="index.html">Portfolio</a>
+        <a href="index.html">Contact</a>
+        <a href="index.html">Mes projets</a>
+        <a href="index.html">Ma vision</a>
+        <a href="index.html">Partenariat</a>
+        <a href="index.html">Actualités</a>
+        <a href="index.html">Mentions légales</a>
+        <a href="index.html">Galerie</a>
+      </div>
+    </div>
+
+    <div>
+      <h3>REJOIGNEZ SSEINY'S</h3>
+      <p>Retrouvez SSEINY'S sur les réseaux sociaux.</p>
+      <div class="socials">
+        <a href="#" aria-label="Facebook">Facebook</a>
+        <a href="#" aria-label="Instagram">Instagram</a>
+        <a href="#" aria-label="TikTok">TikTok</a>
+        <a href="#" aria-label="YouTube">YouTube</a>
+        <a href="#" aria-label="LinkedIn">LinkedIn</a>
+        <a href="#" aria-label="X">X</a>
+        <a href="#" aria-label="Snapchat">Snapchat</a>
+        <a href="#" aria-label="Pinterest">Pinterest</a>
+        <a href="#" aria-label="Telegram">Telegram</a>
+        <a href="#" aria-label="WhatsApp">WhatsApp</a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="copyright">
+    © <span id="year"></span> SSEINY'S. Tous droits réservés.
+    <br>
+    Mentions légales et confidentialité
+  </div>
+</footer>
+
+<button class="motion-control" id="motionBtn">
+  Réduire les animations
+</button>
+
+<script>
+const menuBtn = document.getElementById('menuBtn');
+const navigation = document.getElementById('navigation');
+
+menuBtn.addEventListener('click', () => {
+  navigation.classList.toggle('open');
+});
+
+navigation.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', () => {
+    navigation.classList.remove('open');
+  });
+});
+
+document.getElementById('year').textContent =
+  new Date().getFullYear();
+
+const pages = [
+  "Identité visuelle",
+  "Page accueil",
+  "Page à propos",
+  "Page services",
+  "Page portfolio",
+  "Contact",
+  "Mes projets",
+  "Ma vision",
+  "Partenariat",
+  "Actualités",
+  "Mentions légales et confidentialité",
+  "Galerie"
+];
+
+const searchForm = document.getElementById('searchForm');
+const searchInput = document.getElementById('searchInput');
+const results = document.getElementById('results');
+
+searchForm.addEventListener('submit', event => {
+  event.preventDefault();
+
+  const query = searchInput.value.trim().toLowerCase();
+  results.innerHTML = '';
+
+  if (!query) {
+    results.textContent = 'Veuillez saisir une rubrique.';
+    return;
+  }
+
+  const matches = pages.filter(page =>
+    page.toLowerCase().includes(query)
+  );
+
+  if (!matches.length) {
+    results.textContent = 'Aucune rubrique trouvée.';
+    return;
+  }
+
+  matches.forEach(page => {
+    const link = document.createElement('a');
+    link.href = 'index.html';
+    link.textContent = '→ ' + page;
+    results.appendChild(link);
+  });
+});
+
+const motionBtn = document.getElementById('motionBtn');
+
+motionBtn.addEventListener('click', () => {
+  document.body.classList.toggle('reduce-motion');
+
+  const reduced = document.body.classList.contains('reduce-motion');
+
+  motionBtn.textContent = reduced
+    ? 'Activer les animations'
+    : 'Réduire les animations';
+});
+</script>
+
+</body>
+          </html>
+          
