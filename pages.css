@@ -1,0 +1,39 @@
+/* Styles des pages secondaires SSEINY'S (complète le style de l'accueil) */
+.page-main{padding:140px 0 60px}
+.page-hero{padding:40px 0 30px}
+.page-hero h1{font:600 clamp(38px,5.4vw,66px)/1.1 "Playfair Display",Georgia,serif;margin:12px 0 16px;letter-spacing:-.02em}
+.page-hero p{max-width:760px}
+.blk{margin:64px 0}
+.blk h2{font:600 clamp(28px,3.6vw,44px)/1.15 "Playfair Display",Georgia,serif;margin:10px 0 16px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px;margin-top:28px}
+.card{background:linear-gradient(145deg,var(--panel),var(--panel2));border:1px solid var(--line);border-radius:20px;padding:28px;box-shadow:var(--shadow)}
+.card h3{font:700 22px/1.25 "Manrope",sans-serif;margin:0 0 10px}
+.card ul{padding-left:20px;margin:10px 0}
+.card li{margin:4px 0;color:var(--muted)}
+.tag{display:inline-block;margin:4px 6px 0 0;padding:4px 12px;border-radius:999px;border:1px solid var(--line);font:600 12px "DM Sans",sans-serif;color:var(--muted)}
+.status{display:inline-block;padding:4px 12px;border-radius:999px;background:#397a5522;color:var(--text);font:700 12px "DM Sans",sans-serif;letter-spacing:.06em}
+.placeholder{border:2px dashed var(--line);border-radius:18px;padding:30px;text-align:center;color:var(--muted);min-height:170px;display:grid;place-items:center;font-size:14px}
+.note-box{border-left:3px solid var(--accent-light);background:var(--panel);padding:16px 20px;border-radius:12px;color:var(--muted);margin:22px 0}
+.wa-form{margin-top:26px;background:var(--panel);border:1px solid var(--line);border-radius:22px;padding:30px;box-shadow:var(--shadow)}
+.wa-form .fgrid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.wa-form .full{grid-column:1/-1}
+.wa-form label{display:block;font:600 13px "DM Sans",sans-serif;color:var(--muted);margin-bottom:6px}
+.wa-form input,.wa-form select,.wa-form textarea{width:100%;padding:12px 14px;border-radius:12px;border:1px solid var(--line);background:var(--bg2);color:var(--text);font:500 15px "DM Sans",sans-serif}
+.wa-form textarea{min-height:110px;resize:vertical}
+.wa-form .submit{margin-top:22px}
+.pay-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px}
+.pay-option{position:relative;display:flex;flex-direction:column;align-items:center;gap:6px;padding:16px 10px;border:2px solid var(--line);border-radius:16px;cursor:pointer;background:var(--bg2);text-align:center;transition:transform .2s,border-color .2s}
+.pay-option:hover{transform:translateY(-2px)}
+.pay-option input{position:absolute;opacity:0;pointer-events:none}
+.pay-option b{font:700 14px "DM Sans",sans-serif}
+.pay-option small{font:600 11px "DM Sans",sans-serif;color:var(--muted)}
+.pay-logo-slot{width:56px;height:56px;border-radius:14px;border:1px dashed var(--line);display:grid;place-items:center;font-size:10px;color:var(--muted)}
+.pay-option:has(input:checked){border-color:var(--accent-light);box-shadow:0 0 0 3px #00da0022}
+.pay-option:has(input:checked) small:after{content:" · sélectionné"}
+.recap{margin-top:26px;background:var(--panel);border:1px solid var(--accent-light);border-radius:22px;padding:28px}
+.recap-title{font:700 16px "DM Sans",sans-serif;margin:0 0 12px}
+.recap-text{white-space:pre-wrap;background:var(--bg2);border-radius:14px;padding:18px;font:500 14px/1.6 "DM Sans",monospace;color:var(--text);overflow-x:auto}
+.recap-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:18px}
+.btn.ghost{background:transparent;border:1px solid var(--line);color:var(--text);cursor:pointer}
+.portal-link{display:inline-flex;margin-top:10px}
+@media(max-width:650px){.wa-form .fgrid{grid-template-columns:1fr}.page-main{padding-top:110px}.wa-form{padding:22px}}
