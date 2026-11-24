@@ -40,3 +40,56 @@
 .pay-logo{width:56px;height:56px;object-fit:contain;border-radius:12px;background:#fff;padding:4px}
 .partner-logo{display:grid;place-items:center;background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:24px;min-height:170px}
 .partner-logo img{max-width:220px;max-height:150px;width:auto;height:auto;object-fit:contain;border-radius:12px}
+
+/* Boutons professionnels des pages secondaires */
+.btn,
+.wa-form .submit .btn,
+.recap-actions .btn,
+.portal-link{
+  min-height:48px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:9px;
+  padding:12px 22px;
+  border:1px solid transparent;
+  border-radius:12px;
+  font:700 14px/1.2 "DM Sans","Manrope",sans-serif;
+  letter-spacing:.01em;
+  text-align:center;
+  text-decoration:none;
+  cursor:pointer;
+  transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease,background .2s ease;
+}
+.btn.primary,
+.wa-form .submit .btn.primary,
+.recap-actions .btn.primary,
+.portal-link.primary{
+  background:linear-gradient(120deg,#397a55,#24583b);
+  color:#fff;
+  border-color:#9ac9a36b;
+  box-shadow:0 10px 24px #397a5533;
+}
+.btn.primary:hover,
+.wa-form .submit .btn.primary:hover,
+.recap-actions .btn.primary:hover,
+.portal-link.primary:hover{
+  transform:translateY(-2px);
+  box-shadow:0 15px 34px #397a5566;
+  filter:saturate(1.12);
+}
+.btn.ghost,.recap-actions .btn.ghost{
+  background:transparent;
+  color:var(--text);
+  border:1px solid var(--line);
+}
+.btn.ghost:hover,.recap-actions .btn.ghost:hover{background:var(--panel2);transform:translateY(-2px)}
+.wa-form .submit{width:100%}
+.wa-form .submit .btn{width:100%}
+.recap-actions{align-items:stretch}
+.recap-actions .btn{flex:1 1 220px}
+.wa-form input:focus,.wa-form select:focus,.wa-form textarea:focus{border-color:#397a55;box-shadow:0 0 0 3px #397a5522;outline:none}
+.wa-form [aria-invalid="true"]{border-color:#c56a6a}
+.recap-text{border:1px solid var(--line)}
+@media(max-width:650px){.recap-actions .btn{width:100%;flex-basis:100%}.btn,.portal-link{width:100%}}
+@media(prefers-reduced-motion:reduce){.btn,.portal-link,.recap-actions .btn{transition:none}}

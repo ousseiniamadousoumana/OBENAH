@@ -23,7 +23,7 @@
   var year = $('#year');
   if (year) year.textContent = new Date().getFullYear();
 
-  /* Formulaires -> récapitulatif -> message WhatsApp structuré */
+  /* Formulaires -> récapitulatif -> lien WhatsApp professionnel */
   var cfg = (window.SSEINY_CONFIG && window.SSEINY_CONFIG.whatsapp) || {};
 
   function labelFor(form, el) {
@@ -41,7 +41,7 @@
       if (el.type === 'radio') {
         var v = form.querySelector('input[name="' + el.name + '"]:checked');
         seen[el.name] = true;
-        lines.push(el.dataset.labelGroup + ' : ' + (v ? v.value : '-'));
+        lines.push((el.dataset.labelGroup || labelFor(form, el)) + ' : ' + (v ? v.value : '-'));
         return;
       }
       seen[el.name] = true;
@@ -54,7 +54,11 @@
   }
 
   document.querySelectorAll('form.wa-form').forEach(function (form) {
+    var submit = form.querySelector('[type="submit"]');
+    if (submit) submit.setAttribute('aria-label', 'Vérifier les informations puis ouvrir WhatsApp');
+
     form.addEventListener('submit', function (e) {
+      e.preventEvent && e.preventEvent();
       e.preventDefault();
       if (!form.checkValidity()) { form.reportValidity(); return; }
       var number = cfg[form.dataset.service] || cfg['default'];
@@ -64,11 +68,11 @@
       var box = document.createElement('div');
       box.className = 'recap';
       box.innerHTML =
-        '<p class="recap-title">Vérifiez votre récapitulatif avant l\'envoi</p>' +
+        '<p class="recap-title">Vérifiez votre récapitulatif avant l’envoi</p>' +
         '<pre class="recap-text"></pre>' +
         '<div class="recap-actions">' +
-        '<button type="button" class="btn ghost" data-edit>Modifier</button>' +
-        '<a class="btn primary" target="_blank" rel="noopener">Envoyer sur WhatsApp ↗</a>' +
+        '<button type="button" class="btn ghost" data-edit>Modifier les informations</button>' +
+        '<a class="btn primary" target="_blank" rel="noopener noreferrer" aria-label="Continuer vers WhatsApp">Continuer sur WhatsApp <span aria-hidden="true">↗</span></a>' +
         '</div>';
       box.querySelector('.recap-text').textContent = text;
       box.querySelector('a').href = 'https://wa.me/' + number + '?text=' + encodeURIComponent(text);
